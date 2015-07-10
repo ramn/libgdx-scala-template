@@ -1,7 +1,7 @@
 Build
 =====
 
-    sbt ";project desktop; stage"
+    sbt stage
 
 
 Running game
