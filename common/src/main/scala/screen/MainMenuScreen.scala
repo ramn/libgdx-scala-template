@@ -12,7 +12,7 @@ import se.ramn.MyGame
 class MainMenuScreen(val game: MyGame) extends Screen {
 
   val camera = new OrthographicCamera
-  camera.setToOrtho(false, game.width, game.height)
+  camera.setToOrtho(false, game.width.toFloat, game.height.toFloat)
 
   def render(delta: Float): Unit = {
     Gdx.gl.glClearColor(0, 0, 0.2f, 1)

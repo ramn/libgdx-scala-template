@@ -1,7 +1,6 @@
 package se.ramn.screen
 
 import java.util.Iterator
-import collection.JavaConversions._
 
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.Input.Keys
@@ -26,7 +25,7 @@ import se.ramn.MyGame
 class GameScreen(val game: MyGame) extends Screen {
   // create the camera and the SpriteBatch
   val camera = new OrthographicCamera()
-  camera.setToOrtho(false, game.width, game.height)
+  camera.setToOrtho(false, game.width.toFloat, game.height.toFloat)
 
   override def render(delta: Float) = {
     // clear the screen with a dark blue color. The arguments to glClearColor
@@ -44,7 +43,7 @@ class GameScreen(val game: MyGame) extends Screen {
 
     // draw between batch.begin() and batch.end()
     game.batch.begin()
-    game.font.draw(game.batch, "Hello World!", 0, game.height)
+    game.font.draw(game.batch, "Hello World!", 0, game.height.toFloat)
     //game.batch.draw(someSprite, x, y)
     game.batch.end()
 
@@ -52,7 +51,7 @@ class GameScreen(val game: MyGame) extends Screen {
     // process user input
     if (Gdx.input.isTouched) {
       val touchPos = new Vector3
-      touchPos.set(Gdx.input.getX, Gdx.input.getY, 0)
+      touchPos.set(Gdx.input.getX.toFloat, Gdx.input.getY.toFloat, 0)
       camera.unproject(touchPos)
       // do something with touchPos
     }
