@@ -7,7 +7,7 @@ lazy val commonSettings = Seq(
     "-unchecked",
     "-deprecation",
     "-encoding", "utf8",
-    // "-Xfatal-warnings",
+    "-Xfatal-warnings",
     "-Xlint",
     "-Yno-adapted-args",
     "-Ywarn-dead-code",
