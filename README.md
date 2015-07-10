@@ -4,7 +4,7 @@ Build
     sbt stage
 
 
-Running game
-============
+Run game
+========
 
     ./run
