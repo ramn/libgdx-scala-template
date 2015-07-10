@@ -1,1 +1,3 @@
-sbt "project desktop" "run"
+#!/bin/bash
+
+exec "./desktop/target/universal/stage/bin/objects-in-space"

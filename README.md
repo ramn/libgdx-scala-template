@@ -1,7 +1,7 @@
-Install
-============
+Build
+=====
 
-    sbt updateGdx
+    sbt ";project desktop; stage"
 
 
 Running game
