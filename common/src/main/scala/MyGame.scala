@@ -15,17 +15,17 @@ class MyGame(val width: Int, val height: Int) extends Game {
   def font = myFont
   def batch = myBatch
 
-  override def create() {
+  override def create() = {
     myFont = buildFont
     myBatch = new SpriteBatch
     setScreen(new MainMenuScreen(this))
   }
 
-  override def render() {
+  override def render() = {
     super.render()
   }
 
-  override def dispose() {
+  override def dispose() = {
     batch.dispose()
     font.dispose()
   }

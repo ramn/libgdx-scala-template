@@ -28,7 +28,7 @@ class GameScreen(val game: MyGame) extends Screen {
   val camera = new OrthographicCamera()
   camera.setToOrtho(false, game.width, game.height)
 
-  override def render(delta: Float) {
+  override def render(delta: Float) = {
     // clear the screen with a dark blue color. The arguments to glClearColor
     // are the red, green blue and alpha component in the range [0,1] of the
     // color to be used to clear the screen.
@@ -62,21 +62,21 @@ class GameScreen(val game: MyGame) extends Screen {
     }
   }
 
-  override def resize(width: Int, height: Int) {
+  override def resize(width: Int, height: Int) = {
   }
 
-  override def show {
+  override def show() = {
   }
 
-  override def hide() {
+  override def hide() = {
   }
 
-  override def pause() {
+  override def pause() = {
   }
 
-  override def resume() {
+  override def resume() = {
   }
 
-  override def dispose() {
+  override def dispose() = {
   }
 }
