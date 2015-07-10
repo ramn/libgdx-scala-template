@@ -43,7 +43,7 @@ lazy val common = (project in file("common"))
 lazy val desktop = (project in file("desktop"))
   .settings(commonSettings: _*)
   .settings(
-    name := "objects-in-space",
+    name := "my-game",
     fork in Compile := true,
     mainClass := Some("se.ramn.DesktopStarter")
   )
